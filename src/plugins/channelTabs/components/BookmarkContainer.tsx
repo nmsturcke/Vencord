@@ -96,7 +96,9 @@ function BookmarkFolderOpenMenu(props: BookmarkProps) {
             id={`bookmark-folder-entry-${bkm.channelId}`}
             label={
                 <div style={{ display: "flex", alignItems: "center", "gap": "0.25rem" }}>
-                    {bkm.name}
+                    <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+                        {bkm.name}
+                    </span>
                     {bookmarkNotificationDot && <NotificationDot channelIds={[bkm.channelId]} />}
                 </div>
             }
